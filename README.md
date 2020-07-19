@@ -21,7 +21,7 @@ The whole search engine is based on [Google Knowledge Graph](https://en.wikipedi
 
 ### License
 
-Everything here is released under CC0 license.
+Everything here is released under [CC0 license](LICENSE).
 
 ----
 
