@@ -19,6 +19,21 @@ of custom search engine :)
 
 The whole search engine is based on [Google Knowledge Graph](https://en.wikipedia.org/wiki/Knowledge_Graph).
 
+### Installation
+
+#### As a separate webpage
+
+Just download file `index.html` and (if you need) rename it and put on the
+server. Feel free to modify the default look of the webpage.
+
+#### Search entry only
+
+If you want to embed the search engine on your page, put in the place where you
+want to add it (in HTML):
+
+    <script async src="https://cse.google.com/cse.js?cx=009829025445605706198:-dt42nxzgi8"></script>
+    <div class="gcse-searchbox-only"></div>
+
 ### License
 
 Everything here is released under [CC0 license](LICENSE).
