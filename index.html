@@ -1,21 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
    <head>
       <title>Ada Custom Google Search</title>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-   <head>
-   <style>
-      div#center {
-         position: fixed;
-         left: 5%;
-         top: 5%;
-         width: 90%;
-      }
-   </style>
+      <style>
+         div#center {
+            margin: 5%;
+         }
+         h1 {
+            text-align: center;
+            padding: 2%;
+            background: #228B22;
+            color: white;
+            border-radius: 10px;
+            border-style: outset;
+            border-color: #228B22;
+         }
+         details > summary {
+            text-align: center;
+         }
+         details[open] {
+            background-color: #eeeeee;
+            box-shadow: 1px 1px 2px #bbbbbb;
+            border-radius: 10px;
+         }
+         footer {
+            font-size: small;
+            margin: 1%;
+            text-align: center;
+         }
+      </style>
+   </head>
    <body>
+      <header>
+         <h1>Search for Ada/SPARK on the Web</h1>
+      </header>
       <div id="center">
-         <h2 align="center">Search for Ada/SPARK on the Web</h2>
          <!-- This is the whole code needed for the search engine. If you want to add it to your webpage, copy text between comments --!>
          <script async src="https://cse.google.com/cse.js?cx=009829025445605706198:-dt42nxzgi8"></script>
          <div class="gcse-searchbox-only"></div>
@@ -37,16 +58,21 @@
             </details>
          </div>
          <div>
-            <p>Search for the Ada language or its subset SPARK related things on the Web. This search engine is powered by Google Custom Search engine. After search, you can sort your results by relevance or date. The search engine is customized to find only Ada/SPARK related things, thus queries like "gps" return only "GNAT Programming Studio" related pages.</p>
-            <p>More information about the Ada on the Web:</p>
-            <ul>
-               <li><a href="https://en.wikipedia.org/wiki/Ada_(programming_language)">Ada in Wikipedia</a></li>
-               <li><a href="https://en.wikipedia.org/wiki/SPARK_(programming_language)">SPARK in Wikipedia</a></li>
-               <li><a href="https://github.com/ohenley/awesome-ada">Awesome Ada - A curated list of resources related to the Ada and SPARK</a></li>
-            </ul>
-            <p>If you have any questions, problems or ideas related to the search engine (and its UI) please use the <a href="https://github.com/thindil/adasearch">Github project</a> page</p>
-            <p>Privacy policy related to the search engine is that same like <a href="https://policies.google.com/privacy?hl=en-US">Google privacy and terms</a></p>
+            <details>
+               <summary>About:</summary>
+               <p>Search for the Ada language or its subset SPARK related things on the Web. This search engine is powered by Google Custom Search engine. After search, you can sort your results by relevance or date. The search engine is customized to find only Ada/SPARK related things, thus queries like "gps" return only "GNAT Programming Studio" related pages.</p>
+               <p>More information about the Ada on the Web:</p>
+               <ul>
+                  <li><a href="https://en.wikipedia.org/wiki/Ada_(programming_language)">Ada in Wikipedia</a></li>
+                  <li><a href="https://en.wikipedia.org/wiki/SPARK_(programming_language)">SPARK in Wikipedia</a></li>
+                  <li><a href="https://github.com/ohenley/awesome-ada">Awesome Ada - A curated list of resources related to the Ada and SPARK</a></li>
+               </ul>
+            </details>
          </div>
       </div>
+      <footer>
+         <p>If you have any questions, problems or ideas related to the search engine (and its UI) please use the <a href="https://github.com/thindil/adasearch">Github project</a> page.</p>
+         <p>Privacy policy related to the search engine is that same like <a href="https://policies.google.com/privacy">Google privacy and terms</a></p>
+      </footer>
    </body>
 </html>
