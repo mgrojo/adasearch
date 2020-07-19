@@ -1,5 +1,5 @@
 Here is a short list of configuration options used to create Ada Search in
-[Google Custom Search Engine](https://programmablesearchengine.google.com/)
+[Google Programmable Search Engine](https://programmablesearchengine.google.com/)
 
 1. Creating a new search engine:
 * Sites to search - leave empty, we want to search the whole Web
