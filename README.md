@@ -23,7 +23,7 @@ The whole search engine is based on [Google Knowledge Graph](https://en.wikipedi
 
 #### As a separate webpage
 
-Just download file `index.html` and (if you need) rename it and put on the
+Just download file `index.html`, (if you need) rename it and put on the
 server. Feel free to modify the default look of the webpage.
 
 #### Search entry only
