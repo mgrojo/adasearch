@@ -1,4 +1,4 @@
-This repository is dedicated to the Ada Search - custom Google search engine
+This repository is dedicated to the Ada Search: custom Google search engine
 for the Ada/SPARK programming language. It contains:
 
 * [index.html](index.html) - Ready to deploy the HTML/JavaScript page which can
