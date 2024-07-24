@@ -49,10 +49,10 @@
       </header>
       <div id="center">
          <div id="center2">Search for a phrase in Google:</div>
-         <!-- This is the whole code needed for the Google search engine. If you want to add it to your webpage, copy text between comments --!>
+         <!-- This is the whole code needed for the Google search engine. If you want to add it to your webpage, copy text between comments -->
          <script async src="https://cse.google.com/cse.js?cx=009829025445605706198:-dt42nxzgi8"></script>
          <div class="gcse-searchbox-only"></div>
-         <!-- End of the search engine --!>
+         <!-- End of the search engine -->
          <div>
             <details>
                <summary>Google Fu moves:</summary>
@@ -75,18 +75,41 @@
                <p>Search for the Ada language &mdash;or its subset SPARK&mdash; related things on the Web. This search engine is powered by Google Programmable Search Engine. After showing results of your query, you can sort them by relevance or date. The search engine is customized to find only Ada/SPARK related things, thus queries like "gps" return only "GNAT Programming Studio" related pages.</p>
             </details>
          </div>
-         <div id="center3">Search for an Ada code in searchcode:</div>
-         <!-- This is the whole code needed for the searchcode search engine. If you want to add it to your webpage, copy text between comments --!>
+         <div id="center3">Search for Ada code in searchcode:</div>
+         <!-- This is the whole code needed for the searchcode search engine. If you want to add it to your webpage, copy text between comments -->
          <form method="get" action="https://searchcode.com/?">
-            <input type="search" id="q" name="q">
+            <input type="search" id="q1" name="q">
             <input type="hidden" id="lan" name="lan" value="61">
-            <input type="submit" value="Search">
+            <input type="submit" value="Search on searchcode">
          </form>
-         <!-- End of the search engine --!>
+         <!-- End of the search engine -->
          <div>
             <details>
                <summary>About:</summary>
-               <p>Search for phrase in the Open Source Ada programming langauge programs. This search engine is powered by searchcode. The search engine is customized to looking only for code written in Ada.</p>
+               <p>Search for phrase in the Open Source Ada programming language programs. This search engine is powered by searchcode. The search engine is customized to look only for code written in Ada.</p>
+            </details>
+         </div>
+         <div id="center3">Search for Ada code in Alire crates via search.ada-lang.io:</div>
+         <form method="get" action="https://search.ada-lang.io/?">
+            <input type="search" id="q2" name="q">
+            <input type="submit" value="Search on crates">
+         </form>
+         <div>
+            <details>
+               <summary>About:</summary>
+               <p>Search for any source code pattern found in any of the Alire crates. This search engine is powered by search.ada-lang.io.</p>
+            </details>
+         </div>
+         <div id="center3">Search for Ada code in GitHub:</div>
+         <form method="get" action="https://github.com/search?">
+            <input type="hidden" id="q3" name="q" value="lang=ada+">
+            <input type="hidden" id="type" name="type" value="repositories">
+            <input type="submit" value="Search on GitHub">
+         </form>
+         <div>
+            <details>
+               <summary>About:</summary>
+               <p>Search for any source code pattern found in GitHub.com. The search engine is customized to look only for code written in Ada.</p>
             </details>
          </div>
          <p>More information about the Ada and SPARK on the Web:</p>
