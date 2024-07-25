@@ -6,16 +6,15 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <style>
          div#center {
-            margin: 5%;
+            margin: 0px 5%;
          }
          h1 {
             text-align: center;
-            padding: 2%;
-            background: #228B22;
+            margin: 2px 3% 0px 3%;
+            padding: 3px;
+            background: #00563B;
             color: white;
             border-radius: 10px;
-            border-style: outset;
-            border-color: #228B22;
          }
          details > summary {
             text-align: center;
@@ -23,6 +22,7 @@
          details[open] {
             background-color: #eeeeee;
             box-shadow: 1px 1px 2px #bbbbbb;
+            padding: 5px;
             border-radius: 10px;
          }
          footer {
@@ -33,22 +33,34 @@
          div#center2 {
             text-align: center;
          }
-         div#center3 {
+         .centered {
             text-align: center;
             margin-top: 3%;
          }
          input[type=search] {
-            width: 90%;
+            width: 85%;
             margin: 3px;
+         }
+         header {
+            text-align: center;
+         }
+         .logo {
+            width: 20%;
          }
       </style>
    </head>
    <body>
       <header>
+        <img class="logo" src="img/ada_search.svg" alt="Ada Search">
          <h1>Search for Ada/SPARK on the Web</h1>
       </header>
       <div id="center">
-         <div id="center2">Search for a phrase in Google:</div>
+         <div class="centered">
+            <details>
+               <summary>Search for a phrase in Google:</summary>
+               <p>Search for the Ada language &mdash;or its subset SPARK&mdash; related things on the Web. This search engine is powered by Google Programmable Search Engine. After showing results of your query, you can sort them by relevance or date. The search engine is customized to find only Ada/SPARK related things, thus queries like "spark" return only "SPARK/Ada programming language" related pages.</p>
+            </details>
+            </div>
          <!-- This is the whole code needed for the Google search engine. If you want to add it to your webpage, copy text between comments -->
          <script async src="https://cse.google.com/cse.js?cx=009829025445605706198:-dt42nxzgi8"></script>
          <div class="gcse-searchbox-only"></div>
@@ -69,90 +81,93 @@
                <p>Of course, you can merge any of these moves to create a combo :)</p>
             </details>
          </div>
-         <div>
+         <div class="centered">
             <details>
-               <summary>About:</summary>
-               <p>Search for the Ada language &mdash;or its subset SPARK&mdash; related things on the Web. This search engine is powered by Google Programmable Search Engine. After showing results of your query, you can sort them by relevance or date. The search engine is customized to find only Ada/SPARK related things, thus queries like "gps" return only "GNAT Programming Studio" related pages.</p>
+               <summary>Search for Ada code in searchcode:</summary>
+               <p>Search for a phrase in several source code forges,
+                 like <a href="https://gitlab.com">Gitlab</a>
+                 or <a href="https://bitbucket.com">Bitbucket</a>. This
+                 search engine is powered
+                 by <a href="https://searchcode.com">searchcode</a>. The
+                 search is customized to look only for code written in
+                 Ada.</p>
             </details>
          </div>
-         <div id="center3">Search for Ada code in searchcode:</div>
          <!-- This is the whole code needed for the searchcode search engine. If you want to add it to your webpage, copy text between comments -->
-         <form method="get" action="https://searchcode.com/?">
-            <input type="search" id="q1" name="q">
+         <form method="get" actison="https://searchcode.com/?">
+            <input type="search" name="q">
             <input type="hidden" id="lan" name="lan" value="61">
             <input type="submit" value="Search on searchcode">
          </form>
          <!-- End of the search engine -->
-         <div>
+         <div class="centered">
             <details>
-               <summary>About:</summary>
-               <p>Search for phrase in several source code forges, like Gilab or Bitbucket. This search engine is powered by searchcode. The search is customized to look only for code written in Ada.</p>
+              <summary>Search for Ada code in Alire crates:</summary>
+              <p>Search for any source code pattern found in any of
+              the <a href="https://alire.ada.dev">Alire</a>
+              crates. This search engine is powered
+              by <a href="https://search.ada-lang.io">search.ada-lang.io</a>.</p>
             </details>
          </div>
-         <div id="center4">Search for Ada code in Alire crates via search.ada-lang.io:</div>
          <form method="get" action="https://search.ada-lang.io/?">
-            <input type="search" id="q2" name="q">
+            <input type="search" name="q">
             <input type="submit" value="Search on crates">
          </form>
-         <div>
+         <div class="centered">
             <details>
-               <summary>About:</summary>
-               <p>Search for any source code pattern found in any of the Alire crates. This search engine is powered by search.ada-lang.io.</p>
+               <summary>Search for Ada code in GitHub:</summary>
+               <p>Search for any source code pattern found
+               in <a href="https://github.com">GitHub.com</a>.  Keep
+                 "lang:ada" on the query to look only for code written
+                 in Ada.</p>
             </details>
          </div>
-         <div id="center5">Search for Ada code in GitHub:</div>
          <form method="get" action="https://github.com/search?">
-            <input type="search" id="q3" name="q" value="lang=ada+">
+            <input type="search" name="q" value="lang:ada ">
             <input type="hidden" id="type" name="type" value="repositories">
             <input type="submit" value="Search on GitHub">
          </form>
-         <div>
+         <div class="centered">
             <details>
-               <summary>About:</summary>
-               <p>Search for any source code pattern found in GitHub.com. The search engine is customized to look only for code written in Ada.</p>
+               <summary>Search for a phrase on ada-auth.org search engine:</summary>
+               <p>Search for the Ada language &mdash;or its subset
+               SPARK&mdash; related things on the Web. This search
+               engine is powered by
+               the <a href="http://www.ada-auth.org/wide-search.html">Ada
+               Conformity Assessment Authority</a>.</p>
             </details>
          </div>
-         <div id="center6">Search for phrase on ada-auth.org search engine:</div>
          <form method="get" action="http://www.ada-auth.org/wide-search.cgi?">
             <input type="search" id="SearchA" name="SearchA">
             <input type="hidden" id="SearchO" name="SearchO" value="">
             <input type="hidden" id="SearchN" name="SearchN" value="">
             <input type="hidden" id="APwr" name="APwr" value="Y">
-            <input type="hidden" id="Org" name="Org" value="Y">            
-            <input type="hidden" id="Vend" name="Vend" value="Y">            
-            <input type="hidden" id="Libs" name="Libs" value="Y">            
-            <input type="hidden" id="Other" name="Other" value="Y">            
-            <input type="submit" value="Search with ada-auth.org">
+            <input type="hidden" id="Org" name="Org" value="Y">
+            <input type="hidden" id="Vend" name="Vend" value="Y">
+            <input type="hidden" id="Libs" name="Libs" value="Y">
+            <input type="hidden" id="Other" name="Other" value="Y">
+            <input type="submit" value="Search with ada-auth">
          </form>
-         <div>
+         <div class="centered">
             <details>
-               <summary>About:</summary>
-               <p>Search for the Ada language &mdash;or its subset SPARK&mdash; related things on the Web. This search engine is powered by the Ada Conformity Assessment Authority.</p>
+               <summary>Search for a phrase on the Ada Programming wikibook:</summary>
+               <p>Search for the any phrase on
+               the <a href="https://en.wikibooks.org/wiki/Ada_Programming">Ada
+               Programming wikibook</a>.</p>
             </details>
          </div>
-         <div id="center7">Search for phrase on the Ada Programming wikibook:</div>
          <form method="get" action="https://en.wikibooks.org/wiki/Special:Search?">
             <input type="search" id="search" name="search">
             <input type="hidden" id="prefix" name="prefix" value="Ada_Programming/">
             <input type="hidden" id="ns0" name="ns0" value="1">
-            <input type="hidden" id="ns6" name="ns6" value="1">
-            <input type="hidden" id="ns10" name="ns10" value="1">
-            <input type="hidden" id="ns102" name="ns102" value="1">
-            <input type="hidden" id="ns110" name="ns110" value="1">    
             <input type="submit" value="Search on Wikibook">
          </form>
-         <div>
-            <details>
-               <summary>About:</summary>
-               <p>Search for the any phrase on the Ada Programming wikibook.</p>
-            </details>
-         </div>        
-         <p>More information about the Ada and SPARK on the Web:</p>
+         <p>More information about Ada and SPARK on the Web:</p>
          <ul>
          <li><a href="https://en.wikipedia.org/wiki/Ada_(programming_language)">Ada in Wikipedia</a></li>
          <li><a href="https://en.wikipedia.org/wiki/SPARK_(programming_language)">SPARK in Wikipedia</a></li>
-         <li><a href="https://ada-lang.io/">ada-lang.io - A community site for spreading Ada and SPARK</a></li>
-         <li><a href="https://github.com/ohenley/awesome-ada">Awesome Ada - A curated list of resources related to the Ada and SPARK</a></li>
+         <li><a href="https://ada-lang.io/">ada-lang.io - A community site for promoting Ada and SPARK</a></li>
+         <li><a href="https://github.com/ohenley/awesome-ada">Awesome Ada - A curated list of resources related to Ada and SPARK</a></li>
          </ul>
       </div>
       <footer>

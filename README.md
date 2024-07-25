@@ -1,5 +1,5 @@
-This repository is dedicated to the Ada Search: custom Google search engine
-for the Ada/SPARK programming language. It contains:
+This repository is dedicated to the Ada Search: a custom Google search engine
+for the Ada/SPARK programming language, and other search engines customized for Ada. It contains:
 
 * [index.html](index.html) - Ready to deploy the HTML/JavaScript page which can
   be added to a webpage.
@@ -12,7 +12,6 @@ too much.
 Also, this project exists to help others create and maintain their own version
 of a custom search engine :)
 
-The whole search engine is based on [Google Knowledge Graph](https://en.wikipedia.org/wiki/Knowledge_Graph).
+The custom search engine is based on [Google Knowledge Graph](https://en.wikipedia.org/wiki/Knowledge_Graph).
 
-**INFO:** This project is a maintained fork of the now archived project by @thindil.
-
+**INFO:** This project is a maintained fork of the now archived project thindil/adasearch.
