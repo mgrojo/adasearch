@@ -94,8 +94,8 @@
             </details>
          </div>
          <!-- This is the whole code needed for the searchcode search engine. If you want to add it to your webpage, copy text between comments -->
-         <form method="get" actison="https://searchcode.com/?">
-            <input type="search" name="q">
+         <form method="get" action="https://searchcode.com/?">
+            <input type="search" id="searchcode-q" name="q">
             <input type="hidden" id="lan" name="lan" value="61">
             <input type="submit" value="Search on searchcode">
          </form>
@@ -110,7 +110,7 @@
             </details>
          </div>
          <form method="get" action="https://search.ada-lang.io/?">
-            <input type="search" name="q">
+            <input type="search" id="ada-lang-io-q" name="q">
             <input type="submit" value="Search on crates">
          </form>
          <div class="centered">
@@ -123,7 +123,7 @@
             </details>
          </div>
          <form method="get" action="https://github.com/search?">
-            <input type="search" name="q" value="lang:ada ">
+            <input type="search" id="github-q" name="q" value="lang:ada ">
             <input type="hidden" id="type" name="type" value="repositories">
             <input type="submit" value="Search on GitHub">
          </form>
