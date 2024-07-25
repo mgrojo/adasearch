@@ -55,6 +55,7 @@
          <h1>Search for Ada/SPARK on the Web</h1>
       </header>
       <div id="center">
+
          <div class="centered">
             <details>
                <summary>Search for a phrase in Google:</summary>
@@ -81,6 +82,7 @@
                <p>Of course, you can merge any of these moves to create a combo :)</p>
             </details>
          </div>
+
          <div class="centered">
             <details>
                <summary>Search for Ada code in searchcode:</summary>
@@ -100,6 +102,7 @@
             <input type="submit" value="Search on searchcode">
          </form>
          <!-- End of the search engine -->
+
          <div class="centered">
             <details>
               <summary>Search for Ada code in Alire crates:</summary>
@@ -113,13 +116,14 @@
             <input type="search" id="ada-lang-io-q" name="q">
             <input type="submit" value="Search on crates">
          </form>
+
          <div class="centered">
             <details>
-               <summary>Search for Ada code in GitHub:</summary>
-               <p>Search for any source code pattern found
-               in <a href="https://github.com">GitHub.com</a>.  Keep
-                 "lang:ada" on the query to look only for code written
-                 in Ada.</p>
+               <summary>Search for Ada repositories in GitHub:</summary>
+               <p>Search for any phrase found
+               in <a href="https://github.com">GitHub.com</a> Ada
+               repositories.  Keep "lang:ada" on the query to look
+               only for code written in Ada.</p>
             </details>
          </div>
          <form method="get" action="https://github.com/search?">
@@ -127,6 +131,19 @@
             <input type="hidden" id="type" name="type" value="repositories">
             <input type="submit" value="Search on GitHub">
          </form>
+
+         <div class="centered">
+            <details>
+               <summary>Search for Ada projects in Sourceforge:</summary>
+               <p>Search for any pattern found
+               in the <a href="https://sourceforge.net/">Sourceforge</a> Ada directory.</p>
+            </details>
+         </div>
+         <form method="get" action="https://sourceforge.net/directory/ada/?">
+            <input type="search" id="sf-q" name="q">
+            <input type="submit" value="Search on Sourceforge">
+         </form>
+
          <div class="centered">
             <details>
                <summary>Search for a phrase on ada-auth.org search engine:</summary>
@@ -148,6 +165,7 @@
             <input type="hidden" id="Other" name="Other" value="Y">
             <input type="submit" value="Search with ada-auth">
          </form>
+
          <div class="centered">
             <details>
                <summary>Search for a phrase on the Ada Programming wikibook:</summary>
