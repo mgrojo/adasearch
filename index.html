@@ -70,7 +70,15 @@
          <div class="centered">
             <details>
                <summary>Search for a phrase in Google:</summary>
-               <p>Search for the Ada language &mdash;or its subset SPARK&mdash; related things on the Web. This search engine is powered by Google Programmable Search Engine. After showing results of your query, you can sort them by relevance or date. The search engine is customized to find only Ada/SPARK related things, thus queries like "spark" return only "SPARK/Ada programming language" related pages.</p>
+               <p>Search for the Ada language &mdash;or its subset
+                 SPARK&mdash; related things on the Web. This search
+                 engine is powered
+                 by <a href="https://programmablesearchengine.google.com/about/">Google
+                 Programmable Search Engine</a>. After showing results
+                 of your query, you can sort them by relevance or
+                 date. The search engine is customized to find only
+                 Ada/SPARK related things, thus queries like "aws"
+                 return only "Ada Web Server" related pages.</p>
             </details>
             </div>
          <!-- This is the whole code needed for the Google search engine. If you want to add it to your webpage, copy text between comments -->
@@ -109,7 +117,7 @@
          <!-- This is the whole code needed for the searchcode search engine. If you want to add it to your webpage, copy text between comments -->
          <form method="get" action="https://searchcode.com/?">
             <input type="search" id="searchcode-q" name="q">
-            <input type="hidden" id="lan" name="lan" value="61">
+            <input type="hidden" id="searchcode-lan" name="lan" value="61">
             <input type="submit" value="Search on searchcode">
          </form>
          <!-- End of the search engine -->
@@ -139,7 +147,7 @@
          </div>
          <form method="get" action="https://github.com/search?">
             <input type="search" id="github-q" name="q" value="lang:ada ">
-            <input type="hidden" id="type" name="type" value="repositories">
+            <input type="hidden" id="github-type" name="type" value="repositories">
             <input type="submit" value="Search on GitHub">
          </form>
 
@@ -166,14 +174,14 @@
             </details>
          </div>
          <form method="get" action="http://www.ada-auth.org/wide-search.cgi?">
-            <input type="search" id="SearchA" name="SearchA">
-            <input type="hidden" id="SearchO" name="SearchO" value="">
-            <input type="hidden" id="SearchN" name="SearchN" value="">
-            <input type="hidden" id="APwr" name="APwr" value="Y">
-            <input type="hidden" id="Org" name="Org" value="Y">
-            <input type="hidden" id="Vend" name="Vend" value="Y">
-            <input type="hidden" id="Libs" name="Libs" value="Y">
-            <input type="hidden" id="Other" name="Other" value="Y">
+            <input type="search" id="auth-SearchA" name="SearchA">
+            <input type="hidden" id="auth-SearchO" name="SearchO" value="">
+            <input type="hidden" id="auth-SearchN" name="SearchN" value="">
+            <input type="hidden" id="auth-APwr" name="APwr" value="Y">
+            <input type="hidden" id="auth-Org" name="Org" value="Y">
+            <input type="hidden" id="auth-Vend" name="Vend" value="Y">
+            <input type="hidden" id="auth-Libs" name="Libs" value="Y">
+            <input type="hidden" id="auth-Other" name="Other" value="Y">
             <input type="submit" value="Search with ada-auth">
          </form>
 
@@ -186,9 +194,9 @@
             </details>
          </div>
          <form method="get" action="https://en.wikibooks.org/wiki/Special:Search?">
-            <input type="search" id="search" name="search">
-            <input type="hidden" id="prefix" name="prefix" value="Ada_Programming/">
-            <input type="hidden" id="ns0" name="ns0" value="1">
+            <input type="search" id="wikibooks-search" name="search">
+            <input type="hidden" id="wikibooks-prefix" name="prefix" value="Ada_Programming/">
+            <input type="hidden" id="wikibooks-ns0" name="ns0" value="1">
             <input type="submit" value="Search on Wikibook">
          </form>
          <p>This site
@@ -205,6 +213,30 @@
          <li><a href="https://github.com/ohenley/awesome-ada">Awesome Ada - A curated list of resources related to Ada and SPARK</a></li>
          </ul>
       </div>
+
+
+      <script>
+        // Synchronize the input string from the first text entry to the others
+        // (does not work for Google).
+        const searchcodeQ = document.getElementById("searchcode-q");
+        const adaLangIoQ = document.getElementById("ada-lang-io-q");
+        const githubQ = document.getElementById("github-q");
+        const sfQ = document.getElementById("sf-q");
+        const adaAuthSearchA = document.getElementById("auth-SearchA");
+        const wikibookSearch = document.getElementById("wikibooks-search");
+
+        function sync() {
+            const searchcodeQValue = searchcodeQ.value;
+            adaLangIoQ.value = searchcodeQValue;
+            githubQ.value = "lang:ada " + searchcodeQValue;
+            sfQ.value = searchcodeQValue;
+            adaAuthSearchA.value = searchcodeQValue;
+            wikibookSearch.value = searchcodeQValue;
+        }
+
+        searchcodeQ.addEventListener("input", sync);
+      </script>
+
       <footer>
          <p>If you have any questions, problems or ideas related to the search engine (and its UI) please use the <a href="https://github.com/mgrojo/adasearch">GitHub project</a> page.</p>
          <p>Privacy policy related to the search engines are that same like <a href="https://policies.google.com/privacy">Google privacy and terms</a> and <a href="https://searchcode.com/about/">searchcode privacy and terms</a></p>
