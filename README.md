@@ -1,4 +1,8 @@
-This repository is dedicated to the Ada Search: a custom Google search
+[![Ada Search logo](img/ada_search.svg)](https://mgrojo.github.io/adasearch/)
+[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/ada-lang/Lobby)
+[![Mentioned in Awesome Ada](https://awesome.re/mentioned-badge.svg)](https://github.com/ohenley/awesome-ada)
+
+This repository is dedicated to Ada Search: a custom Google search
 engine for the Ada/SPARK programming language, and other search
 engines customized for Ada. It contains:
 
@@ -24,5 +28,5 @@ can grow almost every day and don't help too much.
 Also, this project can help others create and maintain their own
 version of a custom search engine :)
 
-**INFO:** This project is a maintained fork of the now archived
-project thindil/adasearch.
+**INFO:** This project is a maintained fork of the former
+thindil/adasearch project.
