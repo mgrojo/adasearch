@@ -108,21 +108,18 @@
 
          <div class="centered">
             <details>
-               <summary>Search for Ada code in searchcode:</summary>
-               <p>Search for a phrase in several source code forges,
-                 like <a href="https://gitlab.com">Gitlab</a>
-                 or <a href="https://bitbucket.com">Bitbucket</a>. This
-                 search engine is powered
-                 by <a href="https://searchcode.com">searchcode</a>. The
-                 search is customized to look only for code written in
-                 Ada.</p>
+               <summary>Search for Ada code in grep.app:</summary>
+               <p>Search for a phrase in <a href="https://github.com">GitHub</a>. This
+                 search engine is powered by <a href="https://grep.app/">grep.app/</a>
+                 and customized to look only for code written in Ada.</p>
             </details>
          </div>
-         <!-- This is the whole code needed for the searchcode search engine. If you want to add it to your webpage, copy text between comments -->
-         <form method="get" action="https://searchcode.com/?">
-            <input type="search" id="searchcode-q" name="q">
-            <input type="hidden" id="searchcode-lan" name="lan" value="61">
-            <input type="submit" value="Search on searchcode">
+         <!-- https://grep.app/search?f.lang=Ada&f.lang.pattern=ada&q=hello -->
+         <form method="get" action="https://grep.app/search?">
+            <input type="search" id="grep-app-q" name="q">
+            <input type="hidden" id="grep-app-lang" name="f.lang" value="Ada">
+            <input type="hidden" id="grep-app-lang-pattern" name="f.lang.pattern" value="ada">
+            <input type="submit" value="Search on grep.app">
          </form>
          <!-- End of the search engine -->
 
